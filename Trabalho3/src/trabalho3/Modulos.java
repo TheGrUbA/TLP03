@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Modulos {
 	/**
-	* Esta função lê os dados dos produtos
+	* Esta funÃ§Ã£o lÃª os dados dos produtos
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param preco vetor de preco do produto
@@ -16,32 +16,33 @@ public class Modulos {
 		
 		
 		for(int i=0;i<codigo.length;i++){
-			System.out.print("\nEntre com o código do "+(i+1)+"º produto: ");
+			System.out.print("\nEntre com o cÃ³digo do "+(i+1)+"Âº produto: ");
 			codigo[i]=sc.next();
-			System.out.print("\nEntre com a descrição do "+(i+1)+"º produto: ");
+			System.out.print("\nEntre com a descriÃ§Ã£o do "+(i+1)+"Âº produto: ");
 			descricao[i]=sc.next();	
-			System.out.print("\nEntre com o preço do "+(i+1)+"º produto: ");
+			System.out.print("\nEntre com o preÃ§o do "+(i+1)+"Âº produto: ");
 			preco[i]=sc.nextDouble();
-			System.out.print("\nEntre com a quantidade do "+(i+1)+"º produto: ");
+			System.out.print("\nEntre com a quantidade do "+(i+1)+"Âº produto: ");
 			qestoque[i]=sc.nextInt();
 		}		
 	}
 	/**
-	* Esta função mostra o menu de opções 	
+	* Esta funÃ§Ã£o mostra o menu de opÃ§Ãµes 	
 	*/
 	public static void mostrarMenu() {
-		System.out.println("\nMenu de opções:");
-		System.out.print("\n1 – Imprimir tabela");
-		System.out.print("\n2 – Pesquisar produto");
-		System.out.print("\n4 – Mostrar código e descrição dos produtos cuja quantidade está abaixo de 10");
-		System.out.print("\n5 – Ativo total do estoque");
-		System.out.print("\n6 – Efetuar uma venda");
-		System.out.println("\n7 – Sair");
-		System.out.print("\nEntre com a opção desejada: ");
+		System.out.println("\nMenu de opÃ§Ãµes:");
+		System.out.print("\n1 â€“ Imprimir tabela");
+		System.out.print("\n2 â€“ Pesquisar produto");
+		System.out.print("\n3 â€“ Mostrar dados do produto mais caro");
+		System.out.print("\n4 â€“ Mostrar cÃ³digo e descriÃ§Ã£o dos produtos cuja quantidade estÃ¡ abaixo de 10");
+		System.out.print("\n5 â€“ Ativo total do estoque");
+		System.out.print("\n6 â€“ Efetuar uma venda");
+		System.out.println("\n7 â€“ Sair");
+		System.out.print("\nEntre com a opÃ§Ã£o desejada: ");
 		
 		}
 	/**
-	* Esta função trata o menu de opções
+	* Esta funÃ§Ã£o trata o menu de opÃ§Ãµes
 	* @param op operacao a ser realizada
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
@@ -72,7 +73,7 @@ public class Modulos {
 		}		
 	}
 	/**
-	* Esta função imprime a tabela de produtos
+	* Esta funÃ§Ã£o imprime a tabela de produtos
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param preco vetor de preco do produto
@@ -80,13 +81,13 @@ public class Modulos {
 	*/
 	public static void imprimirTabela(String[] codigo,String[] descricao,double[] preco,int[] qestoque){		
 		for(int i=0;i<codigo.length;i++){
-			System.out.print("Código: "+codigo[i]+"\t | \tDescrição: "+descricao[i]+" \t |" );
-			System.out.printf("\tPreço: R$%.2f \t |",preco[i]);
+			System.out.print("CÃ³digo: "+codigo[i]+"\t | \tDescriÃ§Ã£o: "+descricao[i]+" \t |" );
+			System.out.printf("\tPreÃ§o: R$%.2f \t |",preco[i]);
 			System.out.println( "\tQuantidade em Estoque: "+qestoque[i]);
 		}
 	}
 	/**
-	* Esta função imprime pruduto pesquisado
+	* Esta funÃ§Ã£o imprime pruduto pesquisado
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param preco vetor de preco do produto
@@ -105,17 +106,17 @@ public class Modulos {
 			}
 		}
 		if(cont!=0){				
-			System.out.print("Código: "+codigo[pos]+"\t | \tDescrição"+descricao[pos]+" \t | ");
-			System.out.printf("\tPreço: R$%.2f ",preco[pos]);
+			System.out.print("CÃ³digo: "+codigo[pos]+"\t | \tDescriÃ§Ã£o"+descricao[pos]+" \t | ");
+			System.out.printf("\tPreÃ§o: R$%.2f ",preco[pos]);
 			System.out.println(" \t | Quantidade em Estoque:"+qestoque[pos]+" \t | ");
 			System.out.printf("\tValor Total no Estoque: R$%.2f\n",(qestoque[pos]*preco[pos]));
 		}
 		else{
-			System.out.println("Código inexistente.");
+			System.out.println("CÃ³digo inexistente.");
 		}		
 	}	
 	/**
-	* Esta função imprime pruduto mais caro
+	* Esta funÃ§Ã£o imprime pruduto mais caro
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param preco vetor de preco do produto
@@ -128,14 +129,14 @@ public class Modulos {
 				pos=i;
 			}
 		}
-		System.out.print("Código: "+codigo[pos]+"\t | \tDescrição"+descricao[pos]+" \t | ");
-		System.out.printf("\tPreço: R$%.2f ",preco[pos]);
+		System.out.print("CÃ³digo: "+codigo[pos]+"\t | \tDescriÃ§Ã£o"+descricao[pos]+" \t | ");
+		System.out.printf("\tPreÃ§o: R$%.2f ",preco[pos]);
 		System.out.print(" \t | Quantidade em Estoque:"+qestoque[pos]+" \t | ");
 		System.out.printf("\tValor Total no Estoque: R$%.2f\n",(qestoque[pos]*preco[pos]));
 		
 	}
 	/**
-	* Esta função imprime produtos com menos de 10 unidades no estoque
+	* Esta funÃ§Ã£o imprime produtos com menos de 10 unidades no estoque
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param qestoque vetor de quantidade de produtos no estoque do produto			
@@ -145,7 +146,7 @@ public class Modulos {
 		int cont=0;
 		for(int i=0;i<qestoque.length;i++){
 			if(qestoque[i]<10){
-				System.out.println("Código: "+codigo[i]+"\t | \tDescrição: "+descricao[i]);
+				System.out.println("CÃ³digo: "+codigo[i]+"\t | \tDescriÃ§Ã£o: "+descricao[i]);
 					cont++;		
 			}
 		}
@@ -154,7 +155,7 @@ public class Modulos {
 		}
 	}
 	/**
-	* Esta função imprime o total ativo no estoque
+	* Esta funÃ§Ã£o imprime o total ativo no estoque
 	* @param preco vetor de preco do produto
 	* @param qestoque vetor de quantidade de produtos no estoque do produto			
 	*/
@@ -166,7 +167,7 @@ public class Modulos {
 		System.out.printf("Total Ativo no Estoque: R$%.2f\n", te);
 	}
 	/**
-	* Esta função efetua compras
+	* Esta funÃ§Ã£o efetua compras
 	* @param codigo vetor de codigo do produto
 	* @param descricao vetor de descricao do produto
 	* @param preco vetor de preco do produto
@@ -174,7 +175,7 @@ public class Modulos {
 	*/
 	public static void efetuarVenda(String[] codigo,String[] descricao,double[] preco,int[] qestoque){
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Efetuar Venda:\nEntre com o Código do produto:");
+		System.out.println("Efetuar Venda:\nEntre com o CÃ³digo do produto:");
 		String cod=sc.next();
 		int cont=0;
 		int pos=0;
@@ -185,11 +186,11 @@ public class Modulos {
 			}
 		}
 		if(cont==0){
-			System.out.println("Código não encontrado.");
+			System.out.println("CÃ³digo nÃ£o encontrado.");
 		}
 		else{
-			System.out.print("Código: "+codigo[pos]+"\t | \tDescrição"+descricao[pos]+" \t | ");
-			System.out.printf("\tPreço: R$%.2f ",preco[pos]);
+			System.out.print("CÃ³digo: "+codigo[pos]+"\t | \tDescriÃ§Ã£o"+descricao[pos]+" \t | ");
+			System.out.printf("\tPreÃ§o: R$%.2f ",preco[pos]);
 			System.out.println(" \t | Quantidade em Estoque:"+qestoque[pos]+" \t | ");
 			System.out.println("\nInforme a quantidade de produtos a ser vendida:");
 			int qv=sc.nextInt();
@@ -198,7 +199,7 @@ public class Modulos {
 				System.out.println("Venda efetuada com sucesso.");
 			}
 			else{
-				System.out.println("Não possuimos essa quantidade em estoque, venda não pode ser efetuada.");
+				System.out.println("NÃ£o possuimos essa quantidade em estoque, venda nÃ£o pode ser efetuada.");
 			}
 		}
 		
